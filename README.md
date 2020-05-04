@@ -1,4 +1,4 @@
-# esp8266-doorbell
+# WiFi doorbell
 A simple WiFi doorbell
 
 ## Specifications
