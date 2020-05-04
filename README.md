@@ -1,5 +1,5 @@
 # WiFi doorbell
-A simple WiFi doorbell
+A simple WiFi doorbell using [WiFiManager](https://github.com/tzapu/WiFiManager)
 
-## Specifications
-- Wemos D1 mini with esp8266 microchip
+## Requirements
+- esp8266 microchip
