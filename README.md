@@ -1,8 +1,9 @@
 # WiFi doorbell
-A simple WiFi doorbell using [WiFiManager](https://github.com/tzapu/WiFiManager)
+A simple WiFi doorbell using [WiFiManager](https://github.com/tzapu/WiFiManager). After doorbell is rang, notification will show up in mobile app.
 
 ## Requirements
 - esp8266 microchip
+- smartphone (most likely with android)
 
 ## How to get started
 - connect your chip to voltage & have your WiFi router on
@@ -19,3 +20,4 @@ A simple WiFi doorbell using [WiFiManager](https://github.com/tzapu/WiFiManager)
 
 #### TODO
 - implement sleep CPU mode into main loop in order to reduce energy consumption (https://www.nongnu.org/avr-libc/user-manual/group__avr__sleep.html)
+- android app, which receives UDP packet from doorbell on specified port, parses message and notifies user
