@@ -6,7 +6,7 @@
 
 IPAddress ip( 255, 255, 255, 255 );
 int port = 2345;
-
+volatile bool isr = false;
 WiFiUDP udp;
 
 void send_udp ( const char *s ) {
@@ -15,17 +15,24 @@ void send_udp ( const char *s ) {
   while ( !udp.endPacket() );
 } 
 
+void ICACHE_RAM_ATTR inter() {
+  isr = true;
+}
+
 void setup() {
-  
   Serial.begin( 115200 );
 
   WiFiManager wifiManager;
   wifiManager.setConfigPortalTimeout( 900 );
   wifiManager.autoConnect( "Doorbell", "esp8266-doorbell-ap" );
-
+  
+  pinMode( 13, INPUT );
+  attachInterrupt( digitalPinToInterrupt( 13 ), inter, FALLING );
 }
 
 void loop() {
-  delay( 6000 );
-  send_udp( "ring" );
+  if ( isr ) {
+    send_udp( "ring" );
+    isr = false;
+  }
 }
