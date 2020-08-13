@@ -6,7 +6,7 @@ A simple WiFi doorbell using [WiFiManager](https://github.com/tzapu/WiFiManager)
 - smartphone (most likely with android)
 
 ## How to get started
-- connect your chip to voltage & have your WiFi router on
+- connect your chip to 3,3V or USB 5V & have your WiFi router on
 - check available WiFi connections (from laptop or smartphone) and connect to "Doorbell", password is "esp8266-doorbell-ap"
 - connect to your home's WiFi through interface provided after connecting to "Doorbell" WiFi
 
