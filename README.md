@@ -2,7 +2,7 @@
 A simple WiFi doorbell using [WiFiManager](https://github.com/tzapu/WiFiManager). After doorbell is rang, notification will show up in mobile app.
 
 ## Requirements
-- esp8266 microchip
+- esp8266 microchip (in this example was used Wemos D1 mini module)
 - smartphone (most likely with android)
 
 ## How to get started
