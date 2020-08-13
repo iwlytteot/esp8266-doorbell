@@ -11,4 +11,9 @@ A simple WiFi doorbell using [WiFiManager](https://github.com/tzapu/WiFiManager)
 
 ## Possible problems
 - Due to security reasons, Doorbell AP is available for only 15 minutes. If you hadn't managed to connect to Doorbell interface within 15 minutes, simply reboot chip by unplugging & plugging back to voltage.
-- 
+
+#### Technical background
+- After button is pressed, UDP packet with signal is sent onto broadcast with specified port.
+
+#### TODO
+- implement sleep CPU mode into main loop in order to reduce energy consumption (https://www.nongnu.org/avr-libc/user-manual/group__avr__sleep.html)
